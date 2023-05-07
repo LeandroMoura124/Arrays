@@ -13,7 +13,7 @@ amostra.SetValue(5.9, 4);
 //[2.5][1.0][7.9][6.9][5.9]
 //metodo para calcular a mediana
 
-testaMediana(amostra);
+// testaMediana(amostra);
 
 void testaMediana(Array array){
     if(array ==null || (array.Length ==0)){
@@ -29,10 +29,11 @@ void testaMediana(Array array){
     int meio = tamanho / 2;
 
     double mediana = (tamanho%2 != 0)? numerosOrdenados[meio]: (numerosOrdenados[meio] + numerosOrdenados[meio - 1]) / 2;
+    /* - TERNARIO: O meio de um vetor com número par de elementos está entre dois valores. 
+    Por exemplo, o meio de [1,2,3,4] é entre 2 e 3. Nesse caso, a mediana é a média entre 2 e 3.*/
 
     Console.WriteLine($"A mediana com base na amostra seria {mediana}");
 }
-
 
 void testaArray(){
      int[] idades = new int[5];
@@ -79,4 +80,18 @@ void testaArray(){
            return;
          }
     }
+}
+
+
+
+/*ERRO AO PERCORRER O ARRAY A UMA POSICAO QUE NAO EXISTE*/
+
+int[] valores = {4,5,1,3}; //4 posicoes 0 até 3
+
+for(int i =0; i < valores.Length; i++){
+     Array.Sort(valores);
+     System.Console.WriteLine(valores[i]); //compila 1 3 4 5
+ }
+ for(int i=0; i < 5; i++){
+     System.Console.WriteLine(valores[i]); //nao compila, tenta percorrer um posicao no array valores que nao existe
 }
