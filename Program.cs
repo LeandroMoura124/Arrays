@@ -1,6 +1,6 @@
 ﻿
 //criando arrays diretamente da classe
-
+// Double[] amostra = new Double[5];
 Array amostra = Array.CreateInstance(typeof(double), 5); // todos os arrays herdam disso, aqui só criamos diretamente
                                 //  tipo do array - tamanho
 amostra.SetValue(2.5, 0); // na minha posicao 0 do meu array seu valor será de 2.5
@@ -9,6 +9,7 @@ amostra.SetValue(7.9, 2);
 amostra.SetValue(6.9, 3);
 amostra.SetValue(5.9, 4);
 
+// Console.WriteLine(amostra.Length);  posicoes
 //[2.5][1.0][7.9][6.9][5.9]
 //metodo para calcular a mediana
 
