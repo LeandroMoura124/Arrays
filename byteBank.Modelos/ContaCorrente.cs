@@ -141,6 +141,9 @@ namespace bytebank.Modelos.Conta
         {
             Numero_agencia = numero_agencia;
             //proprieda Guild - gera uma string automatica
+            /*O Globally Unique Identifier, mais conhecido como GUID, ele representa
+             um identificador global exclusivo ele é utilizado para as situações que precisamos
+             de uma sequência única que não se repita para toda uma aplicação.*/
             Conta = Guid.NewGuid().ToString().Substring(0, 8); // gera uma string automatica, contendo 8 carecteres
             Titular = new Cliente();
             TotalDeContasCriadas += 1;
